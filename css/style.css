@@ -1,0 +1,65 @@
+body {
+    position: relative;
+}
+
+.initBoard {
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.board {
+  display: grid;
+  grid-gap: 2px;
+  border: 2px solid #333;
+  background-color: #eee;
+  visibility: hidden;
+}
+
+.board div {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+#display {
+  z-index: 1;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.level-container {
+  visibility: hidden;
+}
+
+#log {
+  margin-top: 20px;
+  height: 500px;
+  width: 300px;
+  overflow-y: scroll;
+  font-size: 20px;
+}
+
+#log > div {
+  margin-top: 5px;
+}
+
+.settings, .mode-container, .level-container, #reset-board{
+    margin-top: 10px;
+}

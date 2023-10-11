@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Caro</title>
+    <script src="./js/caro.js"></script>
+    <script src="./js/heuristic.js"></script>
+    <script src="./js/negamax.js"></script>
+    <script src="./js/bot.js"></script>
+    <script src="./js/board.js"></script>
+    
+
+  </head>
+  <body>
+    <div class="initBoard">
+      <div class="settings">
+        <label for="rows">Hàng:</label>
+        <input type="number" id="rows" min="1" value="5" />
+        <label for="cols">Cột:</label>
+        <input type="number" id="cols" min="1" value="5" />
+        <button id="create-board" onclick="clickCreate()">Tạo Bàn Cờ</button>
+      </div>
+      <div class="mode-container">
+        <label for="playerMode">Chọn chế độ:</label>
+        <select id="playerMode">
+            <option value="2Players">2 Người</option>
+            <option value="vsComputer">Máy</option>
+        </select>
+      </div>
+      <div class="level-container">
+        <label for="level">Chọn độ khó:</label>
+        <select id="level">
+            <option value="Easy">Dễ</option>
+            <option value="Medium">Trung bình</option>
+            <option value="Hard">Khó</option>
+        </select>
+      </div>
+      <button id="reset-board" onclick="resetBoard()">Reset</button>
+    </div>
+
+    <div class="board-container">
+      <div class="board" id="caro-board"></div>
+    </div>
+    <div id="display">
+      <div id="current-player">Người chơi: X</div>
+      <div id="log">
+      </div>
+    </div>
+  </body>
+</html>
